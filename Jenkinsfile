@@ -48,7 +48,7 @@ pipeline {
         }
         stage('Push Image To Registry') {
             steps {
-                sh 'Pushing Image to container registry'
+                sh 'echo Pushing Image to container registry'
             }
         }
     }
