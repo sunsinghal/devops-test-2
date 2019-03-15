@@ -40,7 +40,7 @@ pipeline {
         }
 	stage('Deploy App') {
             steps {
-                sh 'deploying app to expose API endpoint'
+                sh 'echo deploying app to expose API endpoint'
                 sh '''
                 docker run -d -p 3000:3000 ${DOCKER_IMAGE_TAG} npm run start
                 '''
