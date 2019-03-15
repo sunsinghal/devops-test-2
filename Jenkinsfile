@@ -14,7 +14,6 @@ pipeline {
                 '''
             }
         }
-		
         stage('Lint'){
             steps {
                 sh 'echo running ESLint, use npm run fixlint for fixing the issues'
@@ -23,7 +22,6 @@ pipeline {
                 '''
             }
         }
-		
         stage('Coverage'){
             steps {
                 sh 'echo running jest code coverage'
@@ -32,12 +30,19 @@ pipeline {
                 '''
             }
         }
-		
         stage('Unit Tests') {
             steps {
                 sh 'echo running unit test'
                 sh '''
                 docker run --rm -i ${DOCKER_IMAGE_TAG} npm run unit-test
+                '''
+            }
+        }
+	stage('Deploy App') {
+            steps {
+                sh 'deploying app to expose API endpoint'
+                sh '''
+                docker run -d -p 3000:3000 ${DOCKER_IMAGE_TAG}
                 '''
             }
         }

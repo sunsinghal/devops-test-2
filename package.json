@@ -4,6 +4,7 @@
   "description": "DevOps Test1",
   "main": "lib/index.js",
   "scripts": {
+    "start": "node lib/server.js",
     "lint": "eslint lib",
     "fixlint": "eslint ./lib ./tests --fix",
     "unit-test": "jest 'tests/unit/**/*.test.js'"
