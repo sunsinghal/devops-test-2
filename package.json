@@ -8,14 +8,15 @@
     "lint": "eslint lib",
     "fixlint": "eslint ./lib ./tests --fix",
     "unit-test": "jest 'tests/unit/**/*.test.js'",
-	"cov": "jest --collectCoverageFrom=lib/**.js --collectCoverageFrom=tests/unit/**/*.js --coverage lib --coverage tests"
+    "cov": "jest --collectCoverageFrom=lib/**.js --collectCoverageFrom=tests/unit/**/*.js --coverage lib --coverage tests"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:sunsinghal/devops-test1.git"
   },
   "devDependencies": {
-    "eslint": "5.15.1"
+    "eslint": "5.15.1",
+    "jest": "24.5.0"
   },
   "license": "ISC",
   "author": "Sunil Singhal"
