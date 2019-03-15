@@ -15,12 +15,12 @@
     "url": "git@github.com:sunsinghal/devops-test1.git"
   },
   "devDependencies": {
-    "eslint": "5.15.1",
-    "jest": "24.5.0"
+    "eslint": "^5.15.1",
+    "jest": "^24.5.0"
   },
   "dependencies": {
-    "express": "4.16.4",
-    "child_process": "1.0.2"
+    "express": "^4.16.4",
+    "child_process": "^1.0.2"
   },
   "license": "ISC",
   "author": "Sunil Singhal"
