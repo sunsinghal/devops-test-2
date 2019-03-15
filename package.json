@@ -1,0 +1,20 @@
+{
+  "name": "devops-test1",
+  "version": "1.0.0",
+  "description": "DevOps Test1",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib",
+    "fixlint": "eslint ./lib ./tests --fix",
+    "unit-test": "jest 'tests/unit/**/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sunsinghal/devops-test1.git"
+  },
+  "devDependencies": {
+    "eslint": "5.15.1"
+  },
+  "license": "ISC",
+  "author": "Sunil Singhal"
+}
