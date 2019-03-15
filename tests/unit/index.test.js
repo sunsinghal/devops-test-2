@@ -1,7 +1,7 @@
 const handler = require('../../lib/handler');
 
 it('checks for latestCommitsha when callbackerror is null and data is not an empty object', () => {
-    const data = '3cc3643ed07d313f329cf3f35e0e5a455dff13c4'
+    const data = '3cc3643ed07d313f329cf3f35e0e5a455dff13c4';
     const expectedResponse = {
         statusCode: 200,
         responseMessage: {
@@ -27,7 +27,7 @@ it('checks for NULL latestCommitsha when callbackerror is null and data is an em
                 lastCommitSha: 'NULL'
             }
         }
-    }
+    };
     expect(actualResponse).toEqual(expectedResponse);
 });
 
@@ -36,6 +36,6 @@ it('checks for response message when callbackerror is not null and data is null'
     const expectedResponse = {
         statusCode: 404,
         responseMessage: 'Error calculating last commit SHA, sending 404 status code'
-    }
+    };
     expect(actualResponse).toEqual(expectedResponse);
 });
