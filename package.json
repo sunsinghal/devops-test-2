@@ -7,7 +7,8 @@
     "start": "node lib/server.js",
     "lint": "eslint lib",
     "fixlint": "eslint ./lib ./tests --fix",
-    "unit-test": "jest 'tests/unit/**/*.test.js'"
+    "unit-test": "jest 'tests/unit/**/*.test.js'",
+	"cov": "jest --collectCoverageFrom=lib/**.js --collectCoverageFrom=tests/unit/**/*.js --coverage lib --coverage tests"
   },
   "repository": {
     "type": "git",
