@@ -1,5 +1,8 @@
 FROM node:8.15-alpine
 
+#installs git
+RUN apk add --update git
+
 # copy psckage.json and package-lock.json file
 COPY package*.json ./
 
@@ -10,3 +13,6 @@ RUN npm set progress=false && \
 	
 # copy other app files
 COPY . .
+
+# run npm run start to start the server
+CMD npm run start
