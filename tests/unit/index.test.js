@@ -48,3 +48,12 @@ it('checks for NULL latestCommitsha when callbackerror is null and data is an em
     }
     expect(actualResponse).toEqual(expectedResponse);
 });
+
+it('checks for response message when callbackerror is not null and data is null', () => {
+    const actualResponse = handler('callbackerror', null);
+    const expectedResponse = {
+        statusCode: 404,
+        responseMessage: 'Error calculating last commit SHA, sending 404 status code'
+    }
+    expect(actualResponse).toEqual(expectedResponse);
+});
