@@ -39,18 +39,16 @@ pipeline {
             }
         }
         stage('Deploy & Test') {
-                steps {
-                    sh 'echo deploying app to expose API endpoint'
-                    sh '''
-                    docker run -d -p 3000:3000 ${DOCKER_IMAGE_TAG}
-                    '''
-                }
+            steps {
+                sh 'echo deploying app to expose API endpoint'
+                sh '''
+                docker run -d -p 3000:3000 ${DOCKER_IMAGE_TAG}
+                '''
             }
         }
-        stage('Push Image') {
-                steps {
-                    sh 'Pushing Image to container registry'
-                }
+        stage('Push Image To Registry') {
+            steps {
+                sh 'Pushing Image to container registry'
             }
         }
 }
