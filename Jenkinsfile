@@ -51,4 +51,5 @@ pipeline {
                 sh 'Pushing Image to container registry'
             }
         }
+    }
 }
