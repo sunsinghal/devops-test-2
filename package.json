@@ -18,6 +18,9 @@
     "eslint": "5.15.1",
     "jest": "24.5.0"
   },
+  "dependencies": {
+    "express": "4.16.4"
+  },
   "license": "ISC",
   "author": "Sunil Singhal"
 }
